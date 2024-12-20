@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Za Atizi's educational and professional experience, including video highlights.">
+    <title>Experience Page</title>
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #000428, #004e92);
+            color: #ffffff;
+        }
+
+        /* Header Section */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #0f0;
+            text-align: center;
+            padding: 1rem;
+            border-bottom: 2px solid #0f0;
+        }
+
+        /* Container for Content */
+        .container {
+            margin: 20px auto;
+            padding: 5%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+            max-width: 90%;
+        }
+
+        /* Section Styling */
+        .section h2 {
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+        }
+        .timeline li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ff00;
+            border-radius: 8px;
+        }
+        .timeline li span {
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        /* Video Embed - Responsive */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Menu Styling */
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .menu button {
+            background: rgba(0, 0, 0, 0.8);
+            color: #0f0;
+            border: 2px solid #0f0;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            max-width: 200px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #0f0;
+            border-radius: 8px;
+        }
+        .menu-content a {
+            display: block;
+            padding: 10px;
+            color: #0f0;
+            text-decoration: none;
+            border-bottom: 1px solid #0f0;
+        }
+        .menu-content a:last-child {
+            border-bottom: none;
+        }
+        .menu-content a:hover {
+            background: #0f0;
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #0f0;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.2rem;
+            }
+            .container {
+                padding: 3%;
+            }
+            .menu button {
+                font-size: 0.9rem;
+            }
+            .timeline li {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1rem;
+                padding: 0.5rem;
+            }
+            .container {
+                padding: 2%;
+            }
+            .menu button {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+            .timeline li {
+                font-size: 0.8rem;
+                padding: 6px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-content');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Experience</h1>
+    </header>
+
+    <!-- Menu -->
+    <div class="menu">
+        <button onclick="toggleMenu()" aria-label="Toggle Navigation Menu">☰ Menu</button>
+        <div class="menu-content">
+            <a href="main.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="family.html">Family</a>
+            <a href="biodata.html">Biodata</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Schooling Experience -->
+        <div class="section">
+            <h2>Schooling Experience</h2>
+            <ul class="timeline">
+                <li><span>Primary (2011 - 2013):</span> SK Cenderawasih</li>
+                <li><span>Secondary (2017 - 2022):</span> SM Sains Sultan Haji Ahmad Shah</li>
+                <li><span>Diploma (2022 - Now):</span> Universiti Teknologi Mara</li>
+            </ul>
+        </div>
+
+        <!-- Working Experience -->
+        <div class="section">
+            <h2>Working Experience</h2>
+            <ul class="timeline">
+                <li><span>Self Business (2011 - 2021):</span> Sold Lemang</li>
+                <li><span>7eleven Staff (2021 - 2022):</span></li>
+                <li><span>Canteen Staff (2022):</span></li>
+                <li><span>Burger F&amp;B (2024 - Now):</span></li>
+            </ul>
+        </div>
+
+        <!-- Video Experience -->
+        <div class="section">
+            <h2>Video Experience</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/DBS6Q6cuYeU" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Za Atizi Bin Mohd Zainuddin | All Rights Reserved
+    </footer>
+</body>
+</html>

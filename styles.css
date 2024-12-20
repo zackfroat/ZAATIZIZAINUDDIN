@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(19,51,9,1) 0%, rgba(0,0,0,1) 75%);
+    color: white;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Full-Screen Background */
+.full-screen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.6; /* Slight transparency */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Left Content - Circle and Symbols */
+.content {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.symbol {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 15vw;
+    height: auto;
+    z-index: 3;
+}
+
+.symbol2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 30vw;
+    height: auto;
+    z-index: 3;
+}
+
+/* Right Content - Foreground Image */
+.image-container {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foreground-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+/* Clock and Date Styling */
+.clock-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    color: #00ff48;
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    border: 2px solid #00ff48;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ff48;
+    z-index: 10;
+    animation: glow-pulse 1.5s infinite alternate;
+}
+
+#clock {
+    font-size: 28px;
+    text-shadow: 0 0 10px #00ff48;
+}
+
+#date {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Glow Animation */
+@keyframes glow-pulse {
+    from {
+        box-shadow: 0 0 10px #00ff48;
+    }
+    to {
+        box-shadow: 0 0 20px #00ff48;
+    }
+}
+
+/* Button Containers */
+.button-container, .bottom-left-buttons {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.button-container {
+    right: 20px;
+}
+
+.bottom-left-buttons {
+    left: 20px;
+}
+
+.button-image {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.button-image:hover {
+    transform: scale(1.1);
+}
+
+/* Top Corner Buttons */
+.top-corner-buttons {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 15;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content, .image-container {
+        width: 100%;
+        height: 50%;
+    }
+
+    .symbol, .symbol2 {
+        width: 25vw;
+        left: 5%;
+    }
+
+    .button-container, .bottom-left-buttons {
+        flex-direction: row;
+        bottom: 10px;
+        gap: 5px;
+    }
+
+    .button-image {
+        width: 80px;
+    }
+
+    .clock-container {
+        top: 10px;
+        right: 10px;
+        padding: 10px 15px;
+    }
+
+    #clock {
+        font-size: 20px;
+    }
+
+    #date {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .symbol, .symbol2 {
+        width: 40vw;
+    }
+
+    .button-image {
+        width: 60px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .clock-container {
+        padding: 8px 10px;
+    }
+}
